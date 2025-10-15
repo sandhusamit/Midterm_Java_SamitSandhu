@@ -21,8 +21,8 @@ public abstract class Applicant {
             throw new IllegalArgumentException("Fields cannot be empty.");
         }
         //sin validation - 9 digits
-        else if(String.valueOf(sin).length() != 9) { 
-        	throw new IllegalArgumentException("SIN must be 9 digits!");
+        if (String.valueOf(sin).length() != 9) {
+            throw new IllegalArgumentException("SIN must be exactly 9 digits.");
         }
         this.firstName = firstName;
         this.lastName = lastName;
